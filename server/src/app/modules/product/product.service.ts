@@ -1,5 +1,7 @@
 import Product from "./product.model";
-
+const createProduct = async (data: any) => {
+    return await Product.create(data);
+}
 const getAllProducts = async () => {
     return await Product.find();
 };
@@ -13,5 +15,6 @@ const getProductById = async (id: string) => {
 
 export const productsService = {
     getAllProducts,
-    getProductById
+    getProductById,
+    createProduct
 }
